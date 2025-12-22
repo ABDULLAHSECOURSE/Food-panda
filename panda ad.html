@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panda Ads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 600;
+            color: #ff2b7a;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: #ff2b7a;
+        }
+
+        .cta-btn {
+            background-color: #ff2b7a;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color:  #eb5b99;;
+        }
+
+        .search-icon {
+            margin-left: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+       
+
+
+
+
+        .metrics-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+            text-align: center;
+             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+            
+        }
+
+        .metrics-title {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 60px;
+        }
+
+        .metrics-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .metric-box {
+            flex: 1;
+        }
+
+        .metric-number {
+            font-size: 72px;
+            font-weight: 800;
+        }
+
+        .metric-label {
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: lowercase;
+        }
+        .metrics-section:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  transform: translateY(-6px);
+}
+
+
+
+
+
+
+
+
+ .section2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section2 h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.feature {
+  flex: 1;
+   transition:, transform 0.3s ease;
+
+}
+
+.feature img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+   transition: transform 0.3s ease;
+}
+   .feature:hover {
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); */
+  transform: translateY(-6px);
+}
+
+
+
+.feature h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  font-family: poppins;
+}
+
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.left {
+  flex: 1;
+   transition: transform 0.3s ease;
+}
+
+.left img {
+  width: 100%;
+  max-width: 520px;
+   transition: transform 0.3s ease;
+}
+   .left:hover {
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); */
+  transform: translateY(-6px);
+}
+
+.right {
+  flex: 1;
+}
+
+.right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ff2b7a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.button:hover {
+  background: #eb5b99;
+}
+
+
+
+
+
+
+.offapp-wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+
+.offapp-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+}
+
+.offapp-content{
+  flex:1;
+}
+
+.offapp-title{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.offapp-text{
+  font-size:16px;
+  line-height:1.6;
+  color:#333333;
+  max-width:420px;
+  margin-bottom:35px;
+  font-family: poppins;
+}
+
+.offapp-btn{
+  display:inline-block;
+  padding:14px 34px;
+  background:#ff2b7a;
+  color:#ffffff;
+  font-size:16px;
+  font-weight:600;
+  border-radius:30px;
+  text-decoration:none;
+  transition: 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.offapp-btn:hover{
+  background:#eb5b99;
+}
+
+.offapp-image-box{
+  flex:1;
+  text-align:right;
+    transition: transform 0.3s ease;
+}
+
+.offapp-image{
+  width:100%;
+  max-width:520px;
+    transition: transform 0.3s ease;
+}
+ .offapp-image:hover {
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); */
+  transform: translateY(-6px);
+}
+
+
+
+
+
+.site-footer {
+  background: #000;
+  color: #fff;
+  padding: 80px 40px 30px;
+  position: relative;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-brand img {
+  width: 150px;
+   transition: transform 0.3s ease;
+}
+ .footer-brand img:hover {
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); */
+  transform: translateY(-6px);
+}
+
+
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-col ul li a:hover {
+  color: #ff2b85;
+}
+.footer-col h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.social-icons a {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff2b85;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-family: poppins;
+}
+.footer-bottom p {
+  font-family: poppins;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff2b85;
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Media Query section */
+/* =========================
+   TABLET (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .metrics-title,
+  .section2 h1,
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .metrics-grid {
+    gap: 30px;
+  }
+
+  .metric-number {
+    font-size: 60px;
+  }
+
+  .metric-label {
+    font-size: 22px;
+  }
+
+  .features {
+    gap: 30px;
+  }
+
+  .content,
+  .offapp-row {
+    gap: 40px;
+  }
+
+  .right p,
+  .offapp-text {
+    max-width: 100%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================
+   MOBILE (≤768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .search-icon {
+    margin-left: 0;
+  }
+
+  /* Hero Image */
+  body > div img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Metrics */
+  .metrics-section {
+    padding: 60px 15px;
+  }
+
+  .metrics-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .metrics-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .metric-number {
+    font-size: 48px;
+  }
+
+  .metric-label {
+    font-size: 20px;
+  }
+
+  /* Features */
+  .features {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  /* Content section */
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left img {
+    margin: auto;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+
+  /* Off-app sections */
+  .offapp-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offapp-image-box {
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* =========================
+   SMALL PHONES (≤480px)
+========================= */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .metrics-title,
+  .section2 h1,
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .metric-number {
+    font-size: 40px;
+  }
+
+  .feature h3 {
+    font-size: 20px;
+  }
+
+  .right h2,
+  .offapp-title {
+    font-size: 22px;
+  }
+
+  .button,
+  .offapp-btn,
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">panda ads</div>
+
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#">Solutions</a>
+            <a href="#">Resources</a>
+            <a href="#">Tools</a>
+            <a href="./contact.html" class="cta-btn">Contact us</a>
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </nav>
+</header>
+
+<div>
+    <img src="./assets/logo.png" alt="">
+  </div>
+
+
+  <section class="metrics-section">
+    <h1 class="metrics-title">
+        Boost your brand with Asia’s largest<br>
+        food and grocery delivery network*
+    </h1>
+
+    <div class="metrics-grid">
+        <div class="metric-box">
+            <div class="metric-number">125M</div>
+            <div class="metric-label">app downloads</div>
+        </div>
+
+        <div class="metric-box">
+            <div class="metric-number">11</div>
+            <div class="metric-label">markets</div>
+        </div>
+
+        <div class="metric-box">
+            <div class="metric-number">400+</div>
+            <div class="metric-label">cities</div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section2">
+  <h1>Power up your visibility & engagement</h1>
+
+  <div class="features">
+    <div class="feature">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv8DTzroSUojgwiIRK8WHRle9zz66hth1_VQ&s" alt="Maximise your reach">
+      <h3>Maximise your reach</h3>
+      <p>
+        Amplify your campaign by connecting with your target customers
+        right where they shop
+      </p>
+    </div>
+
+    <div class="feature">
+      <img src="data:image/jpeg;base64,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" alt="Engage high-value audiences">
+      <h3>Engage high-value audiences</h3>
+      <p>
+        Leverage our first-party data and advanced targeting
+        to connect with the right audience
+      </p>
+    </div>
+
+    <div class="feature">
+      <img src="data:image/jpeg;base64,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" alt="Get personalised support">
+      <h3>Get personalised support</h3>
+      <p>
+        Achieve your marketing goals and drive growth
+        with personalised support, insights, and more
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="container">
+  <div class="header">
+    <h1>Customised retail media advertising<br>solutions for your brand’s needs</h1>
+  </div>
+
+  <div class="content">
+    <div class="left">
+      <img src="https://pandaads.foodpanda.com/wp-content/uploads/2024/09/jpeg-optimizer_homescreen-edited.png" alt="In-app advertising mockup">
+    </div>
+
+    <div class="right">
+      <h2>In-app advertising</h2>
+      <p>
+        Increase brand visibility with native display ads across different
+        categories on the food delivery app
+      </p>
+      <a href="#" class="button">Explore solutions</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="offapp-wrapper">
+  <div class="offapp-row">
+    <div class="offapp-content">
+      <h2 class="offapp-title">Off-app advertising</h2>
+      <p class="offapp-text">
+        Amplify your campaigns with foodpanda, from email marketing and
+        social media to rider bag ads and product sampling
+      </p>
+      <a href="#" class="offapp-btn">Explore solutions</a>
+    </div>
+
+    <div class="offapp-image-box">
+      <img src="https://pandaads.foodpanda.com/wp-content/uploads/2024/09/jpeg-optimizer_in-app-1024x683.png" alt="Off app advertising" class="offapp-image">
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="offapp-wrapper">
+  <div class="offapp-row">
+    <div class="offapp-image-box">
+      <img src="https://profit.pakistantoday.com.pk/wp-content/uploads/2023/06/Foodpanda-1024x767.png" alt="Off app advertising" class="offapp-image">
+    </div>
+
+
+
+
+    <div class="offapp-content">
+      <h2 class="offapp-title">Strategic partnerships</h2>
+      <p class="offapp-text">
+        Amplify your campaigns with foodpanda, from email marketing and
+        social media to rider bag ads and product sampling
+      </p>
+      <a href="#" class="offapp-btn">Explore solutions</a>
+    </div>
+
+    
+  </div>
+</section>
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-brand">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtiYu9c2wgh4YUBjxDxnnpOXi1qmrh7tElXQ&s" alt="foodpanda logo">
+    </div>
+
+    <!-- Navigate -->
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./newsroom.html">Newsroom</a></li>
+      </ul>
+    </div>
+
+    <!-- Collaborate -->
+    <div class="footer-col">
+      <h4>Collaborate</h4>
+      <ul>
+        <li><a href="#">Explore careers</a></li>
+        <li><a href="#">Become a rider</a></li>
+        <li><a href="#">Feed your team</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col social">
+      <h4>Follow us on</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>Copyright © 2025 foodpanda</p>
+    <a href="#">Privacy Policy</a>
+  </div>
+
+
+</footer>
+</body>
+</html>
+ye panda ads wala
